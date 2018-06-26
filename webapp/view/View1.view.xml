@@ -1,10 +1,96 @@
 <mvc:View controllerName="com.packageEXAMPLE_UI5.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true" xmlns="sap.m">
-	<App>
-		<pages>
-			<Page id="aaa" title="{i18n>title}">
-				<content></content>
-			</Page>
-		</pages>
+	<App id="fioriContent" >
+		<Page title="{i18n>title}" >
+			<VBox>
+				<items>
+					<Panel>
+						<content>
+							<Title id="title" text="Display Assembled Filings" width="100%" textAlign="Center"></Title>
+						</content>
+					</Panel>
+				</items>
+			</VBox> 
+			<VBox>
+				<items>
+					<HBox width="100%">
+						<items>
+							<HBox width="80%" alignContent="Stretch" displayInline="true">
+								<items>
+									<Panel expandable="false" backgroundDesign="Transparent">
+										<content>
+											<Label text="Filing Form" />
+											<MultiInput
+											id="inptFilingForm"
+											showValueHelp="true"
+											valueHelpRequest="onSrchHelp"
+											value="Crime"/>
+										</content>
+									</Panel>
+									<Panel expandable="false" backgroundDesign="Transparent">
+										<content>
+											<Label text="Filing Period" />
+											<MultiInput
+											id="inptFilingPeriod"
+											showValueHelp="true"
+											valueHelpRequest="onSrchHelp"
+											placeholder="March 2017"
+											value="March 2017"/>
+										</content>
+									</Panel>
+									<Panel expandable="false" backgroundDesign="Transparent">
+										<content>
+											<Label text="Filing Teritory" />
+											<MultiInput
+											id="inptFilingTeritory"
+											showValueHelp="true"
+											valueHelpRequest="onSrchHelp"
+											value="Texas"/>
+										</content>
+									</Panel>
+								</items>
+							</HBox>
+							<VBox width="20%" alignContent="Center">
+								<items>
+									<Panel expandable="false" backgroundDesign="Transparent">
+										<content>
+											<Button id="getFilings" text="Get Filings" type="Emphasized" press="getFilings" width="100%"/>
+										</content>
+									</Panel>
+								</items>
+							</VBox>
+						</items>
+					</HBox>
+					<Table items="{path:' / '}">
+						<columns>
+							<Column>
+								<header>
+									<Label text="Name"/>
+								</header>
+							</Column>
+							<Column>
+								<header>
+									<Label text="Username"/>
+								</header>
+							</Column>
+							<Column>
+								<header>
+									<Label text="Email Address"/>
+								</header>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<Text text="{path:'name'}"/>
+									<Text text="{username}"/>
+									<Text text="{email}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</items>
+			</VBox>
+		</Page>
 	</App>
 </mvc:View>
