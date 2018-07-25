@@ -1,1 +1,11 @@
-/* Enter your custom styles here */
+.sapMShellBrandingBar {
+    height: 0px;
+}
+
+.sapMSplitContainerMaster.sapMSplitContainerMasterVisible {
+    width: 500px;
+}/* Enter your custom styles here */
+
+.custTitleStyle{
+	padding: 20px 0;
+}

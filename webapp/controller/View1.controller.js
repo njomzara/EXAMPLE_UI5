@@ -7,13 +7,9 @@ sap.ui.define([
 		
 		onInit : function (){
 			
-			var url = "https://jsonplaceholder.typicode.com/users";
-			
-			var empJSONDataSet = new sap.ui.model.json.JSONModel(url);
-			
-			console.log("DATA");
-			console.log(empJSONDataSet);
-			
+			var oModel = new sap.ui.model.json.JSONModel("model/Clothing.json");
+			this.getView().setModel(oModel);
+		
 		}
 	});
 });
