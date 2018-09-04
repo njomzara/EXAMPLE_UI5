@@ -1,0 +1,67 @@
+{
+  "categories": [
+    {"name": "Union View 1 & View 2", "status" : "sap-icon://circle-task-2", "function_id": "278990", "icon":"sap-icon://exit-full-screen", "categories": [
+      {"name" : "Table View 1", "status" : "sap-icon://circle-task-2", "function_id": "278989", "icon":"sap-icon://table-view", "categories": []},
+      {"name" : "Table View 2", "status" : "sap-icon://circle-task-2", "function_id": "278988", "icon":"sap-icon://table-view","categories": []},
+      {"name" : "Table View 3", "status" : "sap-icon://circle-task-2", "function_id": "278987", "icon":"sap-icon://table-view","categories": [
+        {"name": "Pivot Source Table", "status" : "sap-icon://circle-task-2", "function_id": 278986, "icon":"sap-icon://table-chart", "categories": []}
+      ]}
+    ]},
+    {"name": "Union View 1 & View 2", "status" : "sap-icon://circle-task-2", "function_id": "278990", "icon":"sap-icon://exit-full-screen", "categories": [
+      {"name" : "Table View 1", "status" : "sap-icon://circle-task-2", "function_id": "278989", "icon":"sap-icon://table-view", "categories": []},
+      {"name" : "Table View 2", "status" : "sap-icon://circle-task-2", "function_id": "278988", "icon":"sap-icon://table-view","categories": []},
+      {"name" : "Table View 3", "status" : "sap-icon://circle-task-2", "function_id": "278987", "icon":"sap-icon://table-view","categories": [
+        {"name": "Pivota Source Table", "status" : "sap-icon://circle-task-2", "function_id": 278986, "icon":"sap-icon://table-chart", "categories": []}
+      ]}
+    ]},
+    {"name": "Union View 1 & View 2", "status" : "sap-icon://circle-task-2", "function_id": "278990", "icon":"sap-icon://exit-full-screen", "categories": [
+      {"name" : "Table View 1", "status" : "sap-icon://circle-task-2", "function_id": "278989", "icon":"sap-icon://table-view", "categories": []},
+      {"name" : "Table View 2", "status" : "sap-icon://circle-task-2", "function_id": "278988", "icon":"sap-icon://table-view","categories": []},
+      {"name" : "Table View 3", "status" : "sap-icon://circle-task-2", "function_id": "278987", "icon":"sap-icon://table-view","categories": [
+        {"name": "Pivot Source Table", "status" : "sap-icon://circle-task-2", "function_id": 278986, "icon":"sap-icon://table-chart", "categories": []}
+      ]}
+    ]},
+    {"name": "Union View 1 & View 2", "status" : "sap-icon://circle-task-2", "function_id": "278990", "icon":"sap-icon://exit-full-screen", "categories": [
+      {"name" : "Table View 1", "status" : "sap-icon://circle-task-2", "function_id": "278989", "icon":"sap-icon://table-view", "categories": []},
+      {"name" : "Table View 2", "status" : "sap-icon://circle-task-2", "function_id": "278988", "icon":"sap-icon://table-view","categories": []},
+      {"name" : "Table View 3", "status" : "sap-icon://circle-task-2", "function_id": "278987", "icon":"sap-icon://table-view","categories": [
+        {"name": "Pivot Source Table", "status" : "sap-icon://circle-task-2", "function_id": 278986, "icon":"sap-icon://table-chart", "categories": []}
+      ]}
+    ]},
+    {"name": "Union View 1 & View 2", "status" : "sap-icon://circle-task-2", "function_id": "278990", "icon":"sap-icon://exit-full-screen", "categories": [
+      {"name" : "Table View 1", "status" : "sap-icon://circle-task-2", "function_id": "278989", "icon":"sap-icon://table-view", "categories": []},
+      {"name" : "Table View 2", "status" : "sap-icon://circle-task-2", "function_id": "278988", "icon":"sap-icon://table-view","categories": []},
+      {"name" : "Table View 3", "status" : "sap-icon://circle-task-2", "function_id": "278987", "icon":"sap-icon://table-view","categories": [
+        {"name": "Pivot Source Table", "status" : "sap-icon://circle-task-2", "function_id": 278986, "icon":"sap-icon://table-chart", "categories": []}
+      ]}
+    ]},
+    {"name": "Union View 1 & View 2", "status" : "sap-icon://circle-task-2", "function_id": "278990", "icon":"sap-icon://exit-full-screen", "categories": [
+      {"name" : "Table View 1", "status" : "sap-icon://circle-task-2", "function_id": "278989", "icon":"sap-icon://table-view", "categories": []},
+      {"name" : "Table View 2", "status" : "sap-icon://circle-task-2", "function_id": "278988", "icon":"sap-icon://table-view","categories": []},
+      {"name" : "Table View 3", "status" : "sap-icon://circle-task-2", "function_id": "278987", "icon":"sap-icon://table-view","categories": [
+        {"name": "Pivot Source Table", "status" : "sap-icon://circle-task-2", "function_id": 278986, "icon":"sap-icon://table-chart", "categories": []}
+      ]}
+    ]},
+    {"name": "Union View 1 & View 2", "status" : "sap-icon://circle-task-2", "function_id": "278990", "icon":"sap-icon://exit-full-screen", "categories": [
+      {"name" : "Table View 1", "status" : "sap-icon://circle-task-2", "function_id": "278989", "icon":"sap-icon://table-view", "categories": []},
+      {"name" : "Table View 2", "status" : "sap-icon://circle-task-2", "function_id": "278988", "icon":"sap-icon://table-view","categories": []},
+      {"name" : "Table View 3", "status" : "sap-icon://circle-task-2", "function_id": "278987", "icon":"sap-icon://table-view","categories": [
+        {"name": "Pivot Source Table", "status" : "sap-icon://circle-task-2", "function_id": 278986, "icon":"sap-icon://table-chart", "categories": []}
+      ]}
+    ]},
+    {"name": "Union View 1 & View 2", "status" : "sap-icon://circle-task-2", "function_id": "278990", "icon":"sap-icon://exit-full-screen", "categories": [
+      {"name" : "Table View 1", "status" : "sap-icon://circle-task-2", "function_id": "278989", "icon":"sap-icon://table-view", "categories": []},
+      {"name" : "Table View 2", "status" : "sap-icon://circle-task-2", "function_id": "278988", "icon":"sap-icon://table-view","categories": []},
+      {"name" : "Table View 3", "status" : "sap-icon://circle-task-2", "function_id": "278987", "icon":"sap-icon://table-view","categories": [
+        {"name": "Pivot Source Table", "status" : "sap-icon://circle-task-2", "function_id": 278986, "icon":"sap-icon://table-chart", "categories": []}
+      ]}
+    ]},
+    {"name": "Union View 1 & View 2", "status" : "sap-icon://circle-task-2", "function_id": "278990", "icon":"sap-icon://exit-full-screen", "categories": [
+      {"name" : "Table View 1", "status" : "sap-icon://circle-task-2", "function_id": "278989", "icon":"sap-icon://table-view", "categories": []},
+      {"name" : "Table View 2", "status" : "sap-icon://circle-task-2", "function_id": "278988", "icon":"sap-icon://table-view","categories": []},
+      {"name" : "Table View 3", "status" : "sap-icon://circle-task-2", "function_id": "278987", "icon":"sap-icon://table-view","categories": [
+        {"name": "Pivota Source Table", "status" : "sap-icon://circle-task-2", "function_id": 278986, "icon":"sap-icon://table-chart", "categories": []}
+      ]}
+    ]}
+   ]
+}

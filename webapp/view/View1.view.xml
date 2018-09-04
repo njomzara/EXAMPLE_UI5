@@ -1,27 +1,33 @@
 <mvc:View
-		xmlns:c="sap.ui.core"
-		controllerName="com.packageEXAMPLE_UI5.controller.View1"
-		xmlns:mvc="sap.ui.core.mvc"
-		xmlns:u="sap.ui.unified"
-        xmlns:core="sap.ui.core"
-		xmlns="sap.m"
-		xmlns:sf="sap.ui.layout.form"
-		xmlns:f="sap.f"
-		xmlns:layout="sap.ui.layout"
-		xmlns:t="sap.ui.table"
-		height="100%"
-		width="100%">
-	<SplitApp id="SplitAppDemo" 
+	xmlns:c="sap.ui.core"
+	controllerName="com.packageEXAMPLE_UI5.controller.View1"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+    xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:sf="sap.ui.layout.form"
+	xmlns:f="sap.f"
+	xmlns:dnd="sap.ui.core.dnd"
+	xmlns:layout="sap.ui.layout"
+	xmlns:t="sap.ui.table"
+	height="100%"
+	width="100%">
+
+	<SplitApp 
+		id="saMainLayout" 
 		initialDetail="detail" 
 		initialMaster="master" 
 		orientationChange="onOrientationChange">
 		<detailPages>
-			<Page showHeader="false">
+			<Page title="{i18n>title}" showHeader="false">
 			<VBox>
 				<items>
 					<Panel>
 						<content>
-							<Title id="title" text="Display Assembled Filings" width="100%" textAlign="Center"></Title>
+							<HBox>
+								<Button class="buttonTextSize" icon="sap-icon://menu2" press="showHideMasterPane" tooltip="Show/Hide Master Pane"/>
+								<!-- <Title id="title" text="Display Assembled Filings" width="100%" textAlign="Center"></Title> -->
+							</HBox>
 						</content>
 					</Panel>
 				</items>
@@ -112,49 +118,78 @@
 		<masterPages>
 			<Page title="{i18n>title}" showHeader="false">
 				<content>
-					<Title id="tabTitle" 
+				<!--	<Title id="tabTitle" 
 						   text="Clothing" 
 						   textAlign="Center" 
 						   width="100%" 
-						   class="custTitleStyle"/>
+						   class="custTitleStyle" /> -->
 					<t:TreeTable
-						id="TreeTableBasic"
-	                    rows="{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}"
-	                    selectionMode="MultiToggle"
+						id="exampleTreeTable"
+	                    rows="{path:'/', parameters: {arrayNames:['categories']}}"
+	                    selectionMode="Single"
 	                    enableSelectAll="false"
+	                    rowSelectionChange="onRowSelectionChange"
+	                    firstVisibleRowChanged="onTreeTableScroll"
+	                    visibleRowCountMode="auto"
 	                    ariaLabelledBy="title"
+	                    numberOfExpandedLevels="1"
 	                    height="100%">
 						 <t:extension>
 		                    <Toolbar>
-		                        <Button text="Collapse all" press="onCollapseAll" width="25%"/>
-		                        <Button text="Collapse selection" press="onCollapseSelection" width="25%"/>
-		                        <Button text="Expand first level" press="onExpandFirstLevel" width="25%"/>
-		                        <Button text="Expand selection" press="onExpandSelection" width="25%"/>
+		                    
+		              			<HBox width="50%" justifyContent="Start">
+			                    	<Button class="buttonTextSize" icon="sap-icon://display" press="displayChange" tooltip="Display/Change" />
+		                    		<Button id="btnAddNode" visible="false" class="buttonTextSize" icon="sap-icon://add" press="addNode" tooltip="Add Node" />
+		                        	<Button id="btnDeleteNode" visible="false" class="buttonTextSize" icon="sap-icon://delete" press="deleteNode" tooltip="Delete Node"/>
+								</HBox>
+								<HBox width="50%" justifyContent="End">
+									<Button class="buttonTextSize" icon="sap-icon://search" press="showHideSearch" tooltip="Search"/>	
+			                	    <Button class="buttonTextSize" icon="sap-icon://table-column" press="showTTLayoutMaintenance" tooltip="Table layout"/>		  
+		                    	</HBox>	      	
+		                   
+		                    
+		                    </Toolbar>
+		                    <Toolbar id="tbSearch" visible="false">
+		                    	
+		                    	<SearchField id="sfSearch" tooltip="Search" search="onSearch"  
+		                    				 liveChange="liveSearch" width="80%"></SearchField>
+		                    
+		                    	<Button id="btnSearchNext" class="buttonTextSize"  width="10%"
+		                    			icon="sap-icon://arrow-bottom" press="showSearchNext" tooltip="Search Next" />
+		                        <Button id="btnSearchPrev" class="buttonTextSize"  width="10%"
+		                        		icon="sap-icon://arrow-top" press="showSearchPrevious" tooltip="Search Previous"/>
+								
 		                    </Toolbar>
                 		</t:extension>
+            			<t:dragDropConfig>
+							<dnd:DragDropInfo
+									sourceAggregation="rows"
+									targetAggregation="rows"
+									dragStart="onDragStart"
+									drop="onDrop"/>
+						</t:dragDropConfig>
                 		<t:columns>
-                			<t:Column width="50%">
-		                        <Label text="Categories"/>
+                		
+                			<t:Column width="60%">
+		                        <Label text="Function Name"/>
 		                        <t:template>
-		                            <Text text="{name}" wrapping="false" />
+		                          <Button class="treeButton" icon="{icon}" text="{name}" press="onExpandSelection">
+	                          		<customData>
+                						<core:CustomData key="myData" value="minja" writeToDom="true" />
+                					</customData>
+		                          </Button>
+		                        </t:template>
+		                    </t:Column>
+		                    <t:Column width="15%">
+		                        <Label text="Status"/>
+		                        <t:template>
+		                    		<Button width="100%" class="treeButton" icon="{status}" tooltip="Function Status" />
 		                        </t:template>
 		                    </t:Column>
 		                    <t:Column width="25%">
-		                        <Label text="Price"/>
+		                        <Label text="Function ID"/>
 		                        <t:template>
-		                            <u:Currency value="{amount}" currency="{currency}"/>
-		                        </t:template>
-		                    </t:Column>
-		                    <t:Column width="25%">
-		                        <Label text="Size"/>
-		                        <t:template>
-		                            <Select
-		                                    items="{path: '/sizes', templateShareable: true}"
-		                                    selectedKey="{size}"
-		                                    visible="{= !!${size}}"
-		                                    forceSelection="false">
-		                                <core:Item key="{key}" text="{value}"/>
-		                            </Select>
+		                            <Text  width="100%" text="{function_id}" textAlign="Center" class="textSize"/>
 		                        </t:template>
 		                    </t:Column>
                 		</t:columns>
@@ -162,6 +197,5 @@
 				</content>
 			</Page>
 		</masterPages>
-		
 	</SplitApp>
 </mvc:View>

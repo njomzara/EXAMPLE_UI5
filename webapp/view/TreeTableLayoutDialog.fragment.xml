@@ -1,0 +1,97 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:l="sap.ui.layout"
+   xmlns:f="sap.ui.layout.form"
+   xmlns:core="sap.ui.core" >
+   <Dialog title="Maintain Functions Overview Layout" id="d2">
+   	<l:Grid id="idGrid" defaultSpan="L12 M12 S12" width="auto" hSpacing="1" vSpacing="0" >
+	    <l:content>
+	    	<HBox height="25px"></HBox>
+			<HBox height="100%">
+				<VBox width="45%">
+						<Table
+							id="tAvlColumns"
+							items="{TTAvailableColumns>/data}"
+							mode="MultiSelect"
+							selectionChange="onTabAvlColSelChange"
+							includeItemInSelection="true">
+							<headerToolbar>
+								<Toolbar>
+									<content>
+										<Title width="100%" text="Available Columns" level="H3" textAlign="Center"/>
+									</content>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column
+									width="70%">
+									<Text text="Column Name" />
+								</Column>
+								<Column
+									width="30%">
+									<Text text="Width" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{TTAvailableColumns>name}" />
+										<Text text="{TTAvailableColumns>width}" />
+									</cells>
+								</ColumnListItem>
+							</items>
+						
+						</Table>
+				</VBox>
+				<VBox width="10%" height="auto" alignItems="Center">
+					<items>
+						<Panel expandable="false" backgroundDesign="Transparent">
+							<content>
+								<Button id="btnMoveColRight" class="buttonTextSize" icon="sap-icon://arrow-right" press="moveColRight" tooltip="Show Column"/>
+								<Button id="btnMoveColLeft"  class="buttonTextSize" icon="sap-icon://arrow-left" press="moveColLeft" tooltip="Hide Column"/>
+							</content>
+						</Panel>
+					</items>
+				</VBox>
+				<VBox width="45%">
+					<Table
+							id="tVisColumns"
+							items="{TTVisibleColumns>/data}"
+							mode="MultiSelect"
+							includeItemInSelection="true">
+							<headerToolbar>
+								<Toolbar>
+									<content>
+										<Title width="100%" text="Visible Columns" level="H3" textAlign="Center"/>
+									</content>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column
+									width="70%">
+									<Text text="Column Name" />
+								</Column>
+								<Column
+									width="30%">
+									<Text text="Width" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{TTVisibleColumns>name}" />
+										<Text text="{TTVisibleColumns>width}" />
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+				</VBox>
+			</HBox>
+	    </l:content>
+    </l:Grid>
+   	<buttons>
+    	<Button text = "Cancel" press = "cancelMttl" type = "Reject"/>
+		<Button text = "Apply" press = "createNbf" type = "Accept"/>
+    </buttons>	
+   </Dialog>
+</core:FragmentDefinition>
